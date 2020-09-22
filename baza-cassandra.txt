@@ -1,0 +1,69 @@
+CREATE KEYSPACE caffe-restaurant
+WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+
+create table zaposleni (zaposleni_id int,ime text,prezime text, password text, primary key(zaposleni_id));
+
+ insert into zaposleni (zaposleni_id,ime,prezime,password) values (1,'Milena','Stojanovic','caffecaffe1');
+insert into zaposleni (zaposleni_id,ime,prezime,password) values (2,'Petar','Petkovic','caffecaffe2');
+ insert into zaposleni (zaposleni_id,ime,prezime,password) values (3,'Marina','Jovanovic','caffecaffe3');
+insert into zaposleni (zaposleni_id,ime,prezime,password) values (4,'Marko','Stankovic','caffecaffe4');
+
+create table drinks(naziv text,vrsta text,cena int, primary key(naziv));
+
+insert into drinks(naziv,vrsta,cena) values ('turska kafa','kafa',80);
+ insert into drinks(naziv,vrsta,cena) values ('esspreso','kafa',100);
+ insert into drinks(naziv,vrsta,cena) values ('hladni nes','kafa',120);
+insert into drinks(naziv,vrsta,cena) values ('kapucino','kafa',120);
+insert into drinks(naziv,vrsta,cena) values ('rosa','voda',120);
+ insert into drinks(naziv,vrsta,cena) values ('kisela voda heba','voda',80);
+ insert into drinks(naziv,vrsta,cena) values ('jagoda','gusti sok',120);
+insert into drinks(naziv,vrsta,cena) values ('malina','gusti sok',120);
+insert into drinks(naziv,vrsta,cena) values ('narandza','gusti sok',120);
+insert into drinks(naziv,vrsta,cena) values ('koka kola','gazirani sok',120);
+insert into drinks(naziv,vrsta,cena) values ('sprajt','gazirani sok',120);
+insert into drinks(naziv,vrsta,cena) values ('sveps','gazirani sok',120);
+ insert into drinks(naziv,vrsta,cena) values ('fanta','gazirani sok',120);
+ insert into drinks(naziv,vrsta,cena) values ('barbara 0.18l','vino',250);
+insert into drinks(naziv,vrsta,cena) values ('zuti cvet 0.18l','vino',270);
+insert into drinks(naziv,vrsta,cena) values ('zuti cvet 1l','vino',1200);
+insert into drinks(naziv,vrsta,cena) values ('vranac 0.18l','vino',240);
+ insert into drinks(naziv,vrsta,cena) values ('vranac 1l','vino',800);
+insert into drinks(naziv,vrsta,cena) values ('hainiken','pivo',220);
+ insert into drinks(naziv,vrsta,cena) values ('amstel','pivo',210);
+ insert into drinks(naziv,vrsta,cena) values ('tuborg','pivo',200);
+insert into drinks(naziv,vrsta,cena) values ('hainiken toceni','pivo',150);
+insert into drinks(naziv,vrsta,cena) values ('bavaria toceno','pivo',120);
+insert into drinks(naziv,vrsta,cena) values ('jameson','viski',120);
+ insert into drinks(naziv,vrsta,cena) values ('jack daniels','viski',140);
+insert into drinks(naziv,vrsta,cena) values ('chivas','viski',130);
+ insert into drinks(naziv,vrsta,cena) values ('havana','koktel',250);
+ insert into drinks(naziv,vrsta,cena) values ('long island','koktel',260);
+ insert into drinks(naziv,vrsta,cena) values ('cuba libre','koktel',230);
+
+create table jelovnik (naziv text primary key, tip_jela text,cena int);
+
+ insert into jelovnik (naziv,tip_jela,cena) values ('Omlet kulen','Dorucak',250);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Jaja na oko (3)','Dorucak',150);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Kroasan sunka','Dorucak',200);
+insert into jelovnik (naziv,tip_jela,cena) values ('Palenta','Dorucak',180);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Sendvic Sunka','Sendvic',180);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Sendvic Kulen','Sendvic',180);
+insert into jelovnik (naziv,tip_jela,cena) values ('Sendvic Kulen','Sendvic',200);
+insert into jelovnik (naziv,tip_jela,cena) values ('Klub Sendvic','Sendvic',220);
+insert into jelovnik (naziv,tip_jela,cena) values ('Sendvic Prsuta','Sendvic',240);
+insert into jelovnik (naziv,tip_jela,cena) values ('Karbonara','Pasta',240);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Milaneze','Pasta',240);
+insert into jelovnik (naziv,tip_jela,cena) values ('Fungi','Pasta',240);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Pollo Pasta','Pasta',260);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Grcka Salata','Salate',140);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Cezar Salata','Salate',260);
+insert into jelovnik (naziv,tip_jela,cena) values ('Kapricoza','Pice',600);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Margarita','Pice',500);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Domaca Pica','Pice',700);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Grilovana Piletina','Glavna jela',420);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Grilovana Curetina','Glavna jela',450);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Becka Snicla','Glavna jela',440);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Cheesecake','Dezert',220);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Kolac Jagoda','Dezert',220);
+ insert into jelovnik (naziv,tip_jela,cena) values ('Kolac Vanila','Dezert',220);
+insert into jelovnik (naziv,tip_jela,cena) values ('Sladoled kugla','Dezert',140);
